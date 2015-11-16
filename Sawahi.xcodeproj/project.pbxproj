@@ -297,7 +297,7 @@
 		13AEF6B81964069E007C027B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Cloud Concept";
 				TargetAttributes = {
 					13AEF6BF1964069E007C027B = {
@@ -444,6 +444,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -509,6 +510,7 @@
 				GCC_PREFIX_HEADER = "Sawahi/Sawahi-Prefix.pch";
 				INFOPLIST_FILE = "Sawahi/Sawahi-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.afza.AFZ-e-Services";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "30f00997-342f-4080-b849-0a1b5a173e8a";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -527,6 +529,7 @@
 				GCC_PREFIX_HEADER = "Sawahi/Sawahi-Prefix.pch";
 				INFOPLIST_FILE = "Sawahi/Sawahi-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.afza.AFZ-e-Services";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "30f00997-342f-4080-b849-0a1b5a173e8a";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -550,6 +553,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "SawahiTests/SawahiTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zappisland.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -568,6 +572,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sawahi/Sawahi-Prefix.pch";
 				INFOPLIST_FILE = "SawahiTests/SawahiTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zappisland.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;

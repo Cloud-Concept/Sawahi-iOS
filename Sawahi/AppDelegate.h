@@ -15,11 +15,12 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 {
     CustomIOS7AlertView *_customAlertView;
+    BOOL isBackground;
 }
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) Reachability *reachability;
-@property (strong, nonatomic) WebViewController *mainViewController;
+//@property (strong, nonatomic) WebViewController *mainViewController;
 @property (strong, nonatomic) UIAlertView *alertView;
 //@property (nonatomic) UIPopoverController *noInternetPopover;
 

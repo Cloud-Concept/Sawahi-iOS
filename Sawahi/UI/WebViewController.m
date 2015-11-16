@@ -23,14 +23,21 @@
     [self retrieveCookies];
     [self addSwipeGestureToWebView];
     
-	NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[[NSURL alloc] initWithString:kLoginPageURL]];
-	[self.webView loadRequest:request];
+    [self reloadView:[[NSURL alloc] initWithString:kLoginPageURL]];
+}
+-(void)viewWillAppear:(BOOL)animated{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshView:) name:@"refreshView" object:nil];
+}
+-(void)refreshView:(NSNotification*)notif{
+    if([[notif name] isEqualToString:@"refreshView"])
+        [self reloadView:[[self.webView request] URL]];
+}
+-(void)reloadView:(NSURL*)URI{
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:URI];
+    [self.webView loadRequest:request];
     
     self.webView.delegate = self;
-    
-    ((AppDelegate*) [[UIApplication sharedApplication] delegate]).mainViewController = self;
 }
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
