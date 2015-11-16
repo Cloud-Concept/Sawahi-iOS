@@ -15,18 +15,35 @@
             <rect key="frame" x="0.0" y="0.0" width="286" height="113"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Internet connection lost. Searching for internet connection" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="moz-ta-D1P">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Internet connection lost. Searching for internet connection" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="moz-ta-D1P">
                     <rect key="frame" x="11" y="8" width="264" height="70"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="8Wa-Lm-b6S"/>
+                        <constraint firstAttribute="width" constant="264" id="z4f-Kd-VX5"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="yrs-QX-ZWG">
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="yrs-QX-ZWG">
                     <rect key="frame" x="133" y="85" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="M1n-e1-11M"/>
+                        <constraint firstAttribute="height" constant="20" id="WVF-Vm-olI"/>
+                    </constraints>
                     <color key="color" cocoaTouchSystemColor="darkTextColor"/>
                 </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="moz-ta-D1P" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="11" id="79j-UZ-k4n"/>
+                <constraint firstAttribute="trailing" secondItem="moz-ta-D1P" secondAttribute="trailing" constant="11" id="AbP-X4-OF2"/>
+                <constraint firstItem="yrs-QX-ZWG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="133" id="Buj-Le-JRq"/>
+                <constraint firstItem="moz-ta-D1P" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="DgL-cW-ajA"/>
+                <constraint firstAttribute="trailing" secondItem="yrs-QX-ZWG" secondAttribute="trailing" constant="133" id="RNE-I0-J32"/>
+                <constraint firstItem="yrs-QX-ZWG" firstAttribute="top" secondItem="moz-ta-D1P" secondAttribute="bottom" constant="7" id="RPp-kk-Ixl"/>
+                <constraint firstAttribute="bottom" secondItem="yrs-QX-ZWG" secondAttribute="bottom" constant="8" id="W2z-pm-Gxh"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="98" y="-261.5"/>

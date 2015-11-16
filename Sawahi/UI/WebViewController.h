@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-//* SandBox
+/* SandBox
 #define kLoginPageURL @"https://mobileapp-afzamobileapp.cs8.force.com/mobileapp/apex/MobileAppHomePage"
 //*/
 
-/* Production
+//* Production
 #define kLoginPageURL @"https://afz.force.com/mobileapp/apex/MobileAppHomePage"
 //*/
 
