@@ -24,10 +24,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="dif-ZI-UZS" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Ev9-SC-Smc"/>
-                            <constraint firstAttribute="bottom" secondItem="dif-ZI-UZS" secondAttribute="bottom" id="MPM-Rl-SR3"/>
-                            <constraint firstAttribute="trailing" secondItem="dif-ZI-UZS" secondAttribute="trailing" id="Oti-60-MaO"/>
-                            <constraint firstItem="dif-ZI-UZS" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="t3k-dk-oM3"/>
+                            <constraint firstItem="dif-ZI-UZS" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="2p2-UA-c98"/>
+                            <constraint firstItem="dif-ZI-UZS" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="Kmj-6T-n0K"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="dif-ZI-UZS" secondAttribute="bottom" id="hEM-4t-qjU"/>
+                            <constraint firstAttribute="trailing" secondItem="dif-ZI-UZS" secondAttribute="trailing" id="r1c-o0-dh4"/>
                         </constraints>
                     </view>
                     <connections>
