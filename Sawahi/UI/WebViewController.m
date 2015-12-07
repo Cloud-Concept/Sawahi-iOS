@@ -8,7 +8,7 @@
 
 #import "WebViewController.h"
 #import "AppDelegate.h"
-
+#import "SVProgressHUD.h"
 @interface WebViewController ()
 
 @end
@@ -22,20 +22,29 @@
     
     [self retrieveCookies];
     [self addSwipeGestureToWebView];
-    
     [self reloadView:[[NSURL alloc] initWithString:kLoginPageURL]];
 }
 -(void)viewWillAppear:(BOOL)animated{
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshView:) name:@"refreshView" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(internetLisener:) name:kReachabilityChangedNotification object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshView:) name:@"refreshView" object:nil];
 }
--(void)refreshView:(NSNotification*)notif{
-    if([[notif name] isEqualToString:@"refreshView"])
-        [self reloadView:[[self.webView request] URL]];
+-(void)internetLisener:(NSNotification*)notif{
+    Reachability* curReach = [notif object];
+    NSParameterAssert([curReach isKindOfClass:[Reachability class]]);
+//    NSLog(@"URI ------ %@ ",[[self.webView request] URL]);
+    if([curReach currentReachabilityStatus] != NotReachable)
+    {
+        [self reloadView:([[[self.webView request] URL] absoluteString].length)?[[self.webView request] URL]:[[NSURL alloc] initWithString:kLoginPageURL]];
+    }
 }
+//-(void)refreshView:(NSNotification*)notif{
+//    NSLog(@"URI : ------ %@",[[self.webView request] URL] );
+//    if([[notif name] isEqualToString:@"refreshView"])
+//        [self reloadView:([[self.webView request] URL])?[[self.webView request] URL]:[[NSURL alloc] initWithString:kLoginPageURL]];
+//}
 -(void)reloadView:(NSURL*)URI{
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:URI];
     [self.webView loadRequest:request];
-    
     self.webView.delegate = self;
 }
 - (void)didReceiveMemoryWarning
@@ -103,12 +112,28 @@
 - (void)webViewDidStartLoad:(UIWebView *)webView
 {
     NSString *url = [[[webView request] URL]absoluteString];
-    
+    NSLog(@"UR ---- %@",url);
+    if ([url rangeOfString:@"MobileAppHomePage"].location != NSNotFound) {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
+                [SVProgressHUD showWithStatus:@"Loading..."];
+            });
+        });
+    }
     if([url rangeOfString:@"MobileAppHomePage"].location != NSNotFound)
         [self saveCookies];
     else if([url rangeOfString:@"Logout"].location != NSNotFound)
         [self deleteCookies];
     
+}
+-(void)webViewDidFinishLoad:(UIWebView *)webView{
+//     if ([[[[webView request] URL]absoluteString] rangeOfString:@"MobileAppHomePage"].location != NSNotFound)
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+//        dispatch_async(dispatch_get_main_queue(), ^{
+            [SVProgressHUD dismiss];
+//        });
+//    });
 }
 
 @end

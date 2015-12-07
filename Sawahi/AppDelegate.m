@@ -62,7 +62,7 @@
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-        isBackground = YES;
+//        isBackground = YES;
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
@@ -96,9 +96,9 @@
         if([self.customAlertView isVisible]) {
             [self.customAlertView close];
         }
-        if(!isBackground){
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"refreshView" object:nil];
-        }
+//        if(isBackground){
+//            [[NSNotificationCenter defaultCenter] postNotificationName:@"refreshView" object:nil];
+//        }
 //        [self.mainViewController.webView reload];
 
     }

@@ -9,13 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @class Reachability;
-@class WebViewController;
+//@class WebViewController;
 @class CustomIOS7AlertView;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 {
     CustomIOS7AlertView *_customAlertView;
-    BOOL isBackground;
+//    BOOL isBackground;
 }
 
 @property (strong, nonatomic) UIWindow *window;

@@ -34,6 +34,10 @@
 		13F5061019DD598A00CCBB7F /* icon-Small-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13F5060C19DD598A00CCBB7F /* icon-Small-50@2x.png */; };
 		13F5061119DD598A00CCBB7F /* icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 13F5060D19DD598A00CCBB7F /* icon-Small.png */; };
 		13F5061219DD598A00CCBB7F /* icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13F5060E19DD598A00CCBB7F /* icon-Small@2x.png */; };
+		9D852A221C1418870084FA98 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D852A1B1C1418870084FA98 /* SVIndefiniteAnimatedView.m */; };
+		9D852A231C1418870084FA98 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9D852A1D1C1418870084FA98 /* SVProgressHUD.bundle */; };
+		9D852A241C1418870084FA98 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D852A1F1C1418870084FA98 /* SVProgressHUD.m */; };
+		9D852A251C1418870084FA98 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D852A211C1418870084FA98 /* SVRadialGradientLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +86,14 @@
 		13F5060C19DD598A00CCBB7F /* icon-Small-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-Small-50@2x.png"; sourceTree = "<group>"; };
 		13F5060D19DD598A00CCBB7F /* icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-Small.png"; sourceTree = "<group>"; };
 		13F5060E19DD598A00CCBB7F /* icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-Small@2x.png"; sourceTree = "<group>"; };
+		9D852A1A1C1418870084FA98 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		9D852A1B1C1418870084FA98 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		9D852A1C1C1418870084FA98 /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		9D852A1D1C1418870084FA98 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		9D852A1E1C1418870084FA98 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		9D852A1F1C1418870084FA98 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		9D852A201C1418870084FA98 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVRadialGradientLayer.h; sourceTree = "<group>"; };
+		9D852A211C1418870084FA98 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +234,7 @@
 		13F2932F196407E900C5C0F1 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				9D852A191C1418870084FA98 /* SVProgressHUD */,
 				1307924019D3FF6300BE49D6 /* CustomIOS7AlertView */,
 				1328889F19D00F3000D9197A /* No Internet Popover */,
 				13F29330196407FD00C5C0F1 /* WebViewController.h */,
@@ -251,6 +264,21 @@
 				13F293381964095A00C5C0F1 /* icon@2x.png */,
 			);
 			path = Icons;
+			sourceTree = "<group>";
+		};
+		9D852A191C1418870084FA98 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				9D852A1A1C1418870084FA98 /* SVIndefiniteAnimatedView.h */,
+				9D852A1B1C1418870084FA98 /* SVIndefiniteAnimatedView.m */,
+				9D852A1C1C1418870084FA98 /* SVProgressHUD-Prefix.pch */,
+				9D852A1D1C1418870084FA98 /* SVProgressHUD.bundle */,
+				9D852A1E1C1418870084FA98 /* SVProgressHUD.h */,
+				9D852A1F1C1418870084FA98 /* SVProgressHUD.m */,
+				9D852A201C1418870084FA98 /* SVRadialGradientLayer.h */,
+				9D852A211C1418870084FA98 /* SVRadialGradientLayer.m */,
+			);
+			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,6 +367,7 @@
 				13F5061119DD598A00CCBB7F /* icon-Small.png in Resources */,
 				132888A419D00F7C00D9197A /* NoInternetPopoverViewController.xib in Resources */,
 				13AEF6DF1964069F007C027B /* Images.xcassets in Resources */,
+				9D852A231C1418870084FA98 /* SVProgressHUD.bundle in Resources */,
 				13AEF6D71964069E007C027B /* Main_iPhone.storyboard in Resources */,
 				13F5060F19DD598A00CCBB7F /* icon-Small-50.png in Resources */,
 				13F5061219DD598A00CCBB7F /* icon-Small@2x.png in Resources */,
@@ -364,10 +393,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1307924319D3FF6300BE49D6 /* CustomIOS7AlertView.m in Sources */,
+				9D852A251C1418870084FA98 /* SVRadialGradientLayer.m in Sources */,
+				9D852A241C1418870084FA98 /* SVProgressHUD.m in Sources */,
 				13AEF6D41964069E007C027B /* AppDelegate.m in Sources */,
 				132888A319D00F7C00D9197A /* NoInternetPopoverViewController.m in Sources */,
 				13F29332196407FD00C5C0F1 /* WebViewController.m in Sources */,
 				130202F719CEF9D10017CE7B /* Reachability.m in Sources */,
+				9D852A221C1418870084FA98 /* SVIndefiniteAnimatedView.m in Sources */,
 				13AEF6D01964069E007C027B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -445,6 +477,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Ajmen Free Zone Authority (D9YUMT739A)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Ajmen Free Zone Authority (D9YUMT739A)";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -486,6 +519,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Ajmen Free Zone Authority (D9YUMT739A)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Ajmen Free Zone Authority (D9YUMT739A)";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -508,10 +542,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Ajmen Free Zone Authority (D9YUMT739A)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Ajmen Free Zone Authority (D9YUMT739A)";
+				ENABLE_BITCODE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sawahi/Sawahi-Prefix.pch";
 				INFOPLIST_FILE = "Sawahi/Sawahi-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.afza.AFZ-e-Services";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -527,10 +562,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Ajmen Free Zone Authority (D9YUMT739A)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Ajmen Free Zone Authority (D9YUMT739A)";
+				ENABLE_BITCODE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sawahi/Sawahi-Prefix.pch";
 				INFOPLIST_FILE = "Sawahi/Sawahi-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.afza.AFZ-e-Services";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
